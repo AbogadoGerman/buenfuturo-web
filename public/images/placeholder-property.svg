@@ -1,39 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
-  <rect width="800" height="600" fill="#F9F9F9"/>
-  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E8E0E3" stroke-width="1"/>
-  </pattern>
-  <rect width="800" height="600" fill="url(#grid)"/>
-  <g transform="translate(160, 120)">
-    <rect x="100" y="120" width="280" height="260" fill="#D4C4C8" rx="4"/>
-    <rect x="160" y="60" width="160" height="320" fill="#C0A8B0" rx="4"/>
-    <rect x="140" y="55" width="200" height="12" fill="#800020" rx="2"/>
-    <rect x="120" y="145" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
-    <rect x="165" y="145" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
-    <rect x="210" y="145" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
-    <rect x="255" y="145" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
-    <rect x="300" y="145" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
-    <rect x="120" y="195" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
-    <rect x="165" y="195" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
-    <rect x="210" y="195" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
-    <rect x="255" y="195" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
-    <rect x="300" y="195" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
-    <rect x="120" y="245" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
-    <rect x="165" y="245" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
-    <rect x="210" y="245" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
-    <rect x="255" y="245" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
-    <rect x="300" y="245" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
-    <rect x="175" y="80" width="25" height="25" fill="#800020" opacity="0.5" rx="2"/>
-    <rect x="215" y="80" width="25" height="25" fill="#800020" opacity="0.5" rx="2"/>
-    <rect x="255" y="80" width="25" height="25" fill="#800020" opacity="0.5" rx="2"/>
-    <rect x="200" y="330" width="80" height="50" fill="#800020" opacity="0.7" rx="4"/>
-    <circle cx="275" cy="355" r="4" fill="#F9F9F9" opacity="0.8"/>
-    <rect x="60" y="380" width="360" height="4" fill="#800020" opacity="0.3" rx="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0ebe8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8e0dd;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="800" height="520" fill="url(#bgGrad)" />
+
+  <!-- Silueta edificio centro -->
+  <rect x="300" y="180" width="200" height="220" rx="4" fill="#d4c9c4" />
+  <!-- Ventanas edificio centro -->
+  <rect x="320" y="200" width="30" height="30" rx="2" fill="#b8aba4" />
+  <rect x="365" y="200" width="30" height="30" rx="2" fill="#b8aba4" />
+  <rect x="410" y="200" width="30" height="30" rx="2" fill="#b8aba4" />
+  <rect x="320" y="245" width="30" height="30" rx="2" fill="#c9bdb7" />
+  <rect x="365" y="245" width="30" height="30" rx="2" fill="#b8aba4" />
+  <rect x="410" y="245" width="30" height="30" rx="2" fill="#c9bdb7" />
+  <rect x="320" y="290" width="30" height="30" rx="2" fill="#b8aba4" />
+  <rect x="365" y="290" width="30" height="30" rx="2" fill="#c9bdb7" />
+  <rect x="410" y="290" width="30" height="30" rx="2" fill="#b8aba4" />
+  <!-- Puerta -->
+  <rect x="370" y="350" width="60" height="50" rx="3" fill="#a89890" />
+
+  <!-- Edificio izquierda -->
+  <rect x="160" y="230" width="130" height="170" rx="4" fill="#c9bdb7" />
+  <rect x="178" y="248" width="25" height="25" rx="2" fill="#b8aba4" />
+  <rect x="218" y="248" width="25" height="25" rx="2" fill="#c9bdb7" />
+  <rect x="258" y="248" width="25" height="25" rx="2" fill="#b8aba4" />
+  <rect x="178" y="288" width="25" height="25" rx="2" fill="#c9bdb7" />
+  <rect x="218" y="288" width="25" height="25" rx="2" fill="#c9bdb7" />
+  <rect x="258" y="288" width="25" height="25" rx="2" fill="#c9bdb7" />
+
+  <!-- Edificio derecha -->
+  <rect x="510" y="210" width="130" height="190" rx="4" fill="#c9bdb7" />
+  <rect x="528" y="228" width="25" height="25" rx="2" fill="#b8aba4" />
+  <rect x="568" y="228" width="25" height="25" rx="2" fill="#c9bdb7" />
+  <rect x="608" y="228" width="25" height="25" rx="2" fill="#c9bdb7" />
+  <rect x="528" y="268" width="25" height="25" rx="2" fill="#c9bdb7" />
+  <rect x="568" y="268" width="25" height="25" rx="2" fill="#b8aba4" />
+  <rect x="608" y="268" width="25" height="25" rx="2" fill="#c9bdb7" />
+
+  <!-- Suelo -->
+  <rect x="0" y="400" width="800" height="120" fill="#ccc1bb" />
+
+  <!-- Ícono casa (centro-inferior decorativo) -->
+  <g transform="translate(360, 430) scale(1)">
+    <polygon points="40,-15 80,20 80,55 0,55 0,20" fill="#800020" opacity="0.25" />
+    <polygon points="40,-25 -5,20 85,20" fill="#800020" opacity="0.35" />
   </g>
-  <rect x="0" y="0" width="800" height="8" fill="#800020"/>
-  <rect x="280" y="460" width="240" height="72" fill="#800020" rx="8"/>
-  <text x="400" y="491" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="2">BUEN FUTURO</text>
-  <text x="400" y="516" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.75)" text-anchor="middle" letter-spacing="3">FOTOGRAFIAS EN PROCESO</text>
-  <circle cx="760" cy="40" r="60" fill="#800020" opacity="0.08"/>
-  <circle cx="40" cy="560" r="60" fill="#800020" opacity="0.08"/>
+
+  <!-- Texto -->
+  <text x="400" y="460" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#800020" opacity="0.8" font-style="italic">Foto no disponible · Buen Futuro</text>
 </svg>
