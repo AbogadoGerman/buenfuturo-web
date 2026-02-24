@@ -1,0 +1,110 @@
+[
+  {
+    "nid": "BF-001",
+    "barrio": "Chapinero Alto",
+    "precio": 320000000,
+    "area_m2": 72,
+    "habitaciones": 3,
+    "banos": 2,
+    "estrato": 4,
+    "url_360": "https://my.matterport.com/show/?m=example1",
+    "images": [],
+    "descripcion": "Apartamento luminoso con vista a los cerros orientales, acabados de lujo y cocina integral."
+  },
+  {
+    "nid": "BF-002",
+    "barrio": "Cedritos",
+    "precio": 285000000,
+    "area_m2": 65,
+    "habitaciones": 2,
+    "banos": 2,
+    "estrato": 4,
+    "url_360": "https://my.matterport.com/show/?m=example2",
+    "images": [],
+    "descripcion": "Cerca a parques y transporte público, zona tranquila y segura con portería 24 horas."
+  },
+  {
+    "nid": "BF-003",
+    "barrio": "Chico Norte",
+    "precio": 450000000,
+    "area_m2": 95,
+    "habitaciones": 3,
+    "banos": 3,
+    "estrato": 6,
+    "url_360": "https://my.matterport.com/show/?m=example3",
+    "images": [],
+    "descripcion": "Exclusivo apartamento en zona premium, balcón con vista panorámica y parqueadero doble."
+  },
+  {
+    "nid": "BF-004",
+    "barrio": "Suba Rincón",
+    "precio": 165000000,
+    "area_m2": 52,
+    "habitaciones": 3,
+    "banos": 1,
+    "estrato": 3,
+    "url_360": "",
+    "images": [],
+    "descripcion": "Excelente oportunidad de inversión, conjunto cerrado con zonas comunes completas."
+  },
+  {
+    "nid": "BF-005",
+    "barrio": "Usaquén",
+    "precio": 520000000,
+    "area_m2": 110,
+    "habitaciones": 4,
+    "banos": 3,
+    "estrato": 5,
+    "url_360": "https://my.matterport.com/show/?m=example5",
+    "images": [],
+    "descripcion": "Penthouse dúplex con terraza privada, chimenea y estudio independiente."
+  },
+  {
+    "nid": "BF-006",
+    "barrio": "Kennedy Central",
+    "precio": 140000000,
+    "area_m2": 48,
+    "habitaciones": 2,
+    "banos": 1,
+    "estrato": 3,
+    "url_360": "",
+    "images": [],
+    "descripcion": "Apartamento remodelado con excelente ubicación comercial y acceso a TransMilenio."
+  },
+  {
+    "nid": "BF-007",
+    "barrio": "Santa Bárbara",
+    "precio": 680000000,
+    "area_m2": 130,
+    "habitaciones": 4,
+    "banos": 4,
+    "estrato": 6,
+    "url_360": "https://my.matterport.com/show/?m=example7",
+    "images": [],
+    "descripcion": "Residencia de alto standing con servicio de conserjería, gimnasio y piscina cubierta."
+  },
+  {
+    "nid": "BF-008",
+    "barrio": "Bosa Centro",
+    "precio": 120000000,
+    "area_m2": 45,
+    "habitaciones": 2,
+    "banos": 1,
+    "estrato": 2,
+    "url_360": "",
+    "images": [],
+    "descripcion": "Primera vivienda ideal, conjunto nuevo con subsidio VIS disponible."
+  },
+  {
+    "nid": "BF-009",
+    "barrio": "Chicó Reservado",
+    "precio": 390000000,
+    "area_m2": 85,
+    "habitaciones": 3,
+    "banos": 2,
+    "estrato": 5,
+    "url_360": "https://my.matterport.com/show/?m=example9",
+    "images": [],
+    "descripcion": "Diseño contemporáneo, pisos en porcelanato y closets empotrados en todas las habitaciones."
+  }
+]
