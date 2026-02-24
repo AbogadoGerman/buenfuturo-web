@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Buen Futuro | Apartamentos en Bogotá con Tour 360°",
   description:
-    "Encuentra tu próximo hogar en Bogotá. Apartamentos nuevos y usados con recorridos virtuales en 360°. Asesoría personalizada para familias, abogados e inversionistas.",
+    "Encuentra tu próximo hogar en Bogotá con recorridos virtuales 360°. Asesoría jurídica gratuita en cada negociación.",
 };
 
 export default function RootLayout({
