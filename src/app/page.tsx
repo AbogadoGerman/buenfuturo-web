@@ -1,28 +1,6 @@
-import type { Metadata } from "next";
+import PropertyGrid from "@/components/PropertyGrid";
 
-// ─── Datos de ejemplo (placeholders de apartamentos) ──────────────────────────
-const apartments = [
-  {
-    nid: "BF-001",
-    barrio: "Chapinero Alto",
-    precio: "$320.000.000",
-    imagen: "/placeholder-apto.jpg",
-  },
-  {
-    nid: "BF-002",
-    barrio: "Cedritos",
-    precio: "$285.000.000",
-    imagen: "/placeholder-apto.jpg",
-  },
-  {
-    nid: "BF-003",
-    barrio: "Chico Norte",
-    precio: "$450.000.000",
-    imagen: "/placeholder-apto.jpg",
-  },
-];
-
-// ─── Testimonios ───────────────────────────────────────────────────────────────
+// ─── Testimonios ──────────────────────────────────────────────────────────────
 const testimonios = [
   {
     nombre: "Dr. Carlos Mendoza",
@@ -64,44 +42,46 @@ const testimonios = [
     nombre: "Ing. Mauricio Triana",
     perfil: "Empresario e Inversionista",
     texto:
-      "Seriedad, respaldo legal y tecnología de punta. Buen Futuro es sin duda la plataforma más confiable del mercado inmobiliario bogotano.",
+      "Seriedad, respaldo legal y tecnología de punta. Buen Futuro es sin duda la plataforma más confiable del mercado inmobiliario bogotano."
   },
 ];
 
+// ─── Constantes ───────────────────────────────────────────────────────────────
+const VINOTINTO = "#800020";
+const GRIS_CARBON = "#2D2D2D";
 const WHATSAPP_NUMBER = "573108074915";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20apartamentos%20disponibles.`;
 
+// ─── Página principal ─────────────────────────────────────────────────────────
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#F9F9F9] font-sans">
-
-      {/* ─── HEADER ──────────────────────────────────────────────── */}
-      <header className="sticky top-0 z-50 bg-white border-b border-[#e0e0e0] shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          {/* Logo / Marca */}
+    <main className="min-h-screen bg-[#F9F9F9]">
+      {/* ═══════════════════════════════════════════════════════════════════════
+          HEADER
+      ═══════════════════════════════════════════════════════════════════════ */}
+      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          {/* Logo */}
           <div className="flex items-center gap-3">
-            <span className="w-3 h-8 bg-[#800020] rounded-full block" />
-            <h1 className="text-2xl font-bold text-[#800020] tracking-wide">
+            <span
+              className="w-3 h-8 rounded-full block"
+              style={{ backgroundColor: VINOTINTO }}
+            />
+            <h1
+              className="text-2xl font-bold tracking-wide font-[var(--font-playfair)]"
+              style={{ color: VINOTINTO }}
+            >
               Buen Futuro
             </h1>
           </div>
 
-          {/* Botón WhatsApp */}
+          {/* Nav WhatsApp */}
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className={
-              "
-              flex items-center gap-2 px-5 py-2.5
-              bg-[#25D366] text-white font-semibold
-              rounded-full shadow-md
-              hover:bg-[#1ebe5d] transition-colors duration-200
-              text-sm sm:text-base
-            "
-            }
+            className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-[#25D366] text-white font-semibold rounded-full shadow-md hover:bg-[#1ebe5d] transition-colors duration-200 text-sm"
           >
-            {/* WhatsApp icon (SVG inline) */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -110,45 +90,56 @@ export default function HomePage() {
             >
               <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 1.64 6.04L0 24l6.18-1.62A11.96 11.96 0 0 0 12 24c6.63 0 12-5.37 12-12a11.93 11.93 0 0 0-3.48-8.52zM12 22a9.94 9.94 0 0 1-5.07-1.38l-.36-.21-3.67.96.99-3.58-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.41-1.5-.89-.8-1.49-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51H6.8c-.17 0-.45.06-.69.3s-.9.88-.9 2.14.92 2.49 1.05 2.66c.13.17 1.82 2.78 4.41 3.9.62.27 1.1.43 1.47.55.62.2 1.18.17 1.63.1.5-.07 1.53-.62 1.75-1.23.22-.6.22-1.12.15-1.23-.07-.1-.27-.17-.57-.3z" />
             </svg>
-            Contáctanos por WhatsApp
+            Contáctanos
           </a>
         </div>
       </header>
 
-      {/* ─── HERO SECTION ────────────────────────────────────────── */}
-      <section className="bg-[#800020] text-white py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm uppercase tracking-widest text-[#f5c6c6] mb-3 font-semibold">
+      {/* ═══════════════════════════════════════════════════════════════════════
+          HERO SECTION
+      ═══════════════════════════════════════════════════════════════════════ */}
+      <section
+        className="relative overflow-hidden py-24 sm:py-32 px-4"
+        style={{ backgroundColor: VINOTINTO }}
+      >
+        {/* Patrón decorativo de fondo */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-white rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+        </div>
+
+        <div className="relative max-w-4xl mx-auto text-center">
+          <p className="text-sm uppercase tracking-[0.25em] text-[#f5c6c6] mb-4 font-semibold">
             Plataforma Inmobiliaria con Respaldo Jurídico
           </p>
-          <h2 className="text-3xl sm:text-5xl font-bold leading-tight mb-6">
-            Tu próximo hogar en Bogotá,<br />
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white font-[var(--font-playfair)]">
+            Tu próximo hogar en Bogotá,
+            <br />
             <span className="italic">visto en 360°</span>
           </h2>
-          <p className="text-base sm:text-lg text-[#f5e0e3] max-w-xl mx-auto mb-8">
+          <p className="text-base sm:text-lg text-[#f5e0e3] max-w-xl mx-auto mb-10 leading-relaxed">
             Explora cada rincón de tu futuro apartamento desde cualquier lugar.
             Asesoría jurídica gratuita en cada negociación.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#catalogo"
-              className="
-                px-8 py-3 bg-white text-[#800020] font-bold rounded-full
-                shadow-lg hover:bg-[#f5e0e3] transition-colors duration-200
-                text-base
-              "
+              className="px-8 py-3.5 bg-white font-bold rounded-full shadow-lg hover:bg-[#f5e0e3] transition-colors duration-200 text-base"
+              style={{ color: VINOTINTO }}
             >
-              Ver catálogo
+              Ver Catálogo
             </a>
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="
-                px-8 py-3 border-2 border-white text-white font-semibold rounded-full
-                hover:bg-white hover:text-[#800020] transition-colors duration-200
-                text-base
-              "
+              className="px-8 py-3.5 border-2 border-white text-white font-semibold rounded-full hover:bg-white transition-colors duration-200 text-base"
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLAnchorElement).style.color = VINOTINTO;
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLAnchorElement).style.color = "white";
+              }}
             >
               Hablar con un asesor
             </a>
@@ -156,107 +147,68 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── CATÁLOGO DE APARTAMENTOS ─────────────────────────────── */}
-      <section id="catalogo" className="max-w-6xl mx-auto px-4 py-16">
-        <div className="text-center mb-10">
-          <h3 className="text-2xl sm:text-3xl font-bold text-[#800020] mb-2">
-            Apartamentos disponibles
-          </h3>
-          <p className="text-[#333333] text-sm sm:text-base max-w-xl mx-auto">
-            Cada inmueble incluye tour virtual 360° y revisión jurídica incluida.
-          </p>
-        </div>
+      {/* ═══════════════════════════════════════════════════════════════════════
+          CATÁLOGO — PropertyGrid
+      ═══════════════════════════════════════════════════════════════════════ */}
+      <div id="catalogo" className="scroll-mt-20">
+        <PropertyGrid />
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {apartments.map((apt) => (
-            <article
-              key={apt.nid}
-              className="bg-white rounded-2xl shadow-md overflow-hidden border border-[#e8e8e8] hover:shadow-lg transition-shadow duration-200"
-            >
-              {/* Imagen placeholder */}
-              <div className="w-full h-48 bg-gradient-to-br from-[#800020] to-[#b5003a] flex items-center justify-center">
-                <div className="text-center text-white opacity-70">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-12 h-12 mx-auto mb-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={1.5}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 9.75L12 3l9 6.75V21H3V9.75z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 21V12h6v9" />
-                  </svg>
-                  <span className="text-xs font-medium">Tour 360° disponible</span>
-                </div>
-              </div>
-
-              {/* Info */}
-              <div className="p-5">
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <p className="text-xs text-[#888] font-semibold uppercase tracking-widest mb-0.5">
-                      NID: {apt.nid}
-                    </p>
-                    <h4 className="text-lg font-bold text-[#333333]">{apt.barrio}</h4>
-                  </div>
-                  <span className="bg-[#f5e0e3] text-[#800020] text-xs font-bold px-2 py-1 rounded-full">
-                    Disponible
-                  </span>
-                </div>
-
-                <p className="text-2xl font-bold text-[#800020] mb-4">{apt.precio}</p>
-
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={
-                    "
-                    block text-center w-full py-2.5 px-4
-                    bg-[#800020] text-white font-semibold rounded-xl
-                    hover:bg-[#660018] transition-colors duration-200
-                    text-sm
-                  "
-                  }
-                >
-                  🔴 Ver Tour 360°
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      {/* ─── TESTIMONIOS ─────────────────────────────────────────── */}
-      <section className="bg-[#333333] py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-              Lo que dicen nuestros clientes
+      {/* ═══════════════════════════════════════════════════════════════════════
+          TESTIMONIOS — Confianza Buen Futuro
+      ═══════════════════════════════════════════════════════════════════════ */}
+      <section
+        className="py-20 px-4"
+        style={{ backgroundColor: GRIS_CARBON }}
+      >
+        <div className="max-w-7xl mx-auto">
+          {/* Encabezado */}
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-3 font-semibold">
+              Testimonios verificados
+            </p>
+            <h3 className="text-3xl sm:text-4xl font-bold text-white font-[var(--font-playfair)] mb-3">
+              Confianza Buen Futuro
             </h3>
-            <p className="text-[#aaaaaa] text-sm sm:text-base">
-              Abogados, inversionistas y familias que confiaron en Buen Futuro.
+            <p className="text-gray-400 text-sm sm:text-base max-w-lg mx-auto">
+              Abogados, inversionistas y familias que confiaron en nosotros
+              para tomar la mejor decisión inmobiliaria.
             </p>
           </div>
 
+          {/* Grid de testimonios */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {testimonios.map((t, i) => (
               <blockquote
                 key={i}
-                className="bg-white rounded-2xl p-6 shadow-md flex flex-col gap-4"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col gap-4 hover:bg-white/10 transition-colors duration-300"
               >
-                <p className="text-[#444] text-sm leading-relaxed italic">
-                  &ldquo;{t.texto}&rdquo;
+                {/* Comillas decorativas */}
+                <span
+                  className="text-3xl leading-none font-serif opacity-40"
+                  style={{ color: VINOTINTO }}
+                >
+                  &ldquo;
+                </span>
+                <p className="text-gray-300 text-sm leading-relaxed -mt-4">
+                  {t.texto}
                 </p>
-                <footer className="mt-auto flex items-center gap-3">
-                  {/* Avatar placeholder */}
-                  <div className="w-10 h-10 rounded-full bg-[#800020] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                <footer className="mt-auto flex items-center gap-3 pt-4 border-t border-white/10">
+                  {/* Avatar */}
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
+                    style={{ backgroundColor: VINOTINTO }}
+                  >
                     {t.nombre.charAt(0)}
                   </div>
                   <div>
-                    <p className="font-bold text-[#800020] text-sm leading-tight">{t.nombre}</p>
-                    <p className="text-[#888] text-xs">{t.perfil}</p>
+                    <p
+                      className="font-bold text-sm leading-tight"
+                      style={{ color: "#f5c6c6" }}
+                    >
+                      {t.nombre}
+                    </p>
+                    <p className="text-gray-500 text-xs">{t.perfil}</p>
                   </div>
                 </footer>
               </blockquote>
@@ -265,8 +217,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── FOOTER ──────────────────────────────────────────────── */}
-      <footer className="bg-[#800020] text-white text-center py-6 px-4">
+      {/* ═══════════════════════════════════════════════════════════════════════
+          FOOTER
+      ═══════════════════════════════════════════════════════════════════════ */}
+      <footer
+        className="text-white text-center py-8 px-4"
+        style={{ backgroundColor: VINOTINTO }}
+      >
         <p className="text-sm font-semibold tracking-wide">
           © {new Date().getFullYear()} Buen Futuro · Bogotá, Colombia
         </p>
@@ -275,6 +232,25 @@ export default function HomePage() {
         </p>
       </footer>
 
+      {/* ═══════════════════════════════════════════════════════════════════════
+          WHATSAPP FLOTANTE
+      ═══════════════════════════════════════════════════════════════════════ */}
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-200"
+        aria-label="Contactar por WhatsApp"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="w-7 h-7"
+        >
+          <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 1.64 6.04L0 24l6.18-1.62A11.96 11.96 0 0 0 12 24c6.63 0 12-5.37 12-12a11.93 11.93 0 0 0-3.48-8.52zM12 22a9.94 9.94 0 0 1-5.07-1.38l-.36-.21-3.67.96.99-3.58-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.41-1.5-.89-.8-1.49-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51H6.8c-.17 0-.45.06-.69.3s-.9.88-.9 2.14.92 2.49 1.05 2.66c.13.17 1.82 2.78 4.41 3.9.62.27 1.1.43 1.47.55.62.2 1.18.17 1.63.1.5-.07 1.53-.62 1.75-1.23.22-.6.22-1.12.15-1.23-.07-.1-.27-.17-.57-.3z" />
+        </svg>
+      </a>
     </main>
   );
 }
