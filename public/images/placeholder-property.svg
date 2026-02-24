@@ -1,81 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" fill="none">
-  <!-- Fondo degradado suave -->
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="540" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#f5e8ec"/>
-      <stop offset="100%" stop-color="#ede0e4"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#800020" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#5a0016" stop-opacity="0.9"/>
-    </linearGradient>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#80002020"/>
-    </filter>
-  </defs>
-
-  <!-- Fondo -->
-  <rect width="800" height="540" fill="url(#bg)"/>
-
-  <!-- Patrón sutil de puntos -->
-  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
-    <circle cx="2" cy="2" r="1.5" fill="#800020" fill-opacity="0.07"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#F9F9F9"/>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E8E0E3" stroke-width="1"/>
   </pattern>
-  <rect width="800" height="540" fill="url(#dots)"/>
-
-  <!-- Silueta de edificio / casa — icono central -->
-  <g transform="translate(300, 130)" filter="url(#shadow)">
-    <!-- Edificio principal -->
-    <rect x="30" y="80" width="140" height="160" rx="4" fill="url(#accent)"/>
-    <!-- Techo -->
-    <polygon points="0,80 100,10 200,80" fill="#800020" opacity="0.95"/>
-    <!-- Ventanas edificio -->
-    <rect x="50" y="105" width="30" height="30" rx="3" fill="white" fill-opacity="0.35"/>
-    <rect x="120" y="105" width="30" height="30" rx="3" fill="white" fill-opacity="0.35"/>
-    <rect x="50" y="155" width="30" height="30" rx="3" fill="white" fill-opacity="0.35"/>
-    <rect x="120" y="155" width="30" height="30" rx="3" fill="white" fill-opacity="0.35"/>
-    <rect x="50" y="205" width="30" height="30" rx="3" fill="white" fill-opacity="0.35"/>
-    <rect x="120" y="205" width="30" height="30" rx="3" fill="white" fill-opacity="0.35"/>
-    <!-- Puerta -->
-    <rect x="80" y="195" width="40" height="45" rx="4" fill="white" fill-opacity="0.5"/>
-    <!-- Torre lateral izquierda -->
-    <rect x="-40" y="110" width="60" height="130" rx="3" fill="#800020" opacity="0.7"/>
-    <polygon points="-55,110 -10,65 35,110" fill="#800020" opacity="0.65"/>
-    <!-- Torre lateral derecha -->
-    <rect x="180" y="110" width="60" height="130" rx="3" fill="#800020" opacity="0.7"/>
-    <polygon points="165,110 210,65 255,110" fill="#800020" opacity="0.65"/>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  <g transform="translate(160, 120)">
+    <rect x="100" y="120" width="280" height="260" fill="#D4C4C8" rx="4"/>
+    <rect x="160" y="60" width="160" height="320" fill="#C0A8B0" rx="4"/>
+    <rect x="140" y="55" width="200" height="12" fill="#800020" rx="2"/>
+    <rect x="120" y="145" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
+    <rect x="165" y="145" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
+    <rect x="210" y="145" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
+    <rect x="255" y="145" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
+    <rect x="300" y="145" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
+    <rect x="120" y="195" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
+    <rect x="165" y="195" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
+    <rect x="210" y="195" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
+    <rect x="255" y="195" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
+    <rect x="300" y="195" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
+    <rect x="120" y="245" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
+    <rect x="165" y="245" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
+    <rect x="210" y="245" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
+    <rect x="255" y="245" width="30" height="30" fill="#800020" opacity="0.4" rx="2"/>
+    <rect x="300" y="245" width="30" height="30" fill="#800020" opacity="0.6" rx="2"/>
+    <rect x="175" y="80" width="25" height="25" fill="#800020" opacity="0.5" rx="2"/>
+    <rect x="215" y="80" width="25" height="25" fill="#800020" opacity="0.5" rx="2"/>
+    <rect x="255" y="80" width="25" height="25" fill="#800020" opacity="0.5" rx="2"/>
+    <rect x="200" y="330" width="80" height="50" fill="#800020" opacity="0.7" rx="4"/>
+    <circle cx="275" cy="355" r="4" fill="#F9F9F9" opacity="0.8"/>
+    <rect x="60" y="380" width="360" height="4" fill="#800020" opacity="0.3" rx="2"/>
   </g>
-
-  <!-- Línea base / suelo -->
-  <rect x="160" y="425" width="480" height="3" rx="2" fill="#800020" fill-opacity="0.2"/>
-
-  <!-- Texto principal -->
-  <text
-    x="400"
-    y="470"
-    text-anchor="middle"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="22"
-    font-weight="600"
-    fill="#800020"
-    letter-spacing="2"
-  >BUEN FUTURO</text>
-
-  <!-- Texto secundario -->
-  <text
-    x="400"
-    y="500"
-    text-anchor="middle"
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="13"
-    fill="#800020"
-    fill-opacity="0.55"
-    letter-spacing="3"
-  >FOTOGRAFÍAS EN PROCESO</text>
-
-  <!-- Pequeños puntos decorativos flanqueando el texto -->
-  <circle cx="220" cy="470" r="3" fill="#800020" fill-opacity="0.3"/>
-  <circle cx="210" cy="470" r="2" fill="#800020" fill-opacity="0.2"/>
-  <circle cx="580" cy="470" r="3" fill="#800020" fill-opacity="0.3"/>
-  <circle cx="590" cy="470" r="2" fill="#800020" fill-opacity="0.2"/>
+  <rect x="0" y="0" width="800" height="8" fill="#800020"/>
+  <rect x="280" y="460" width="240" height="72" fill="#800020" rx="8"/>
+  <text x="400" y="491" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="2">BUEN FUTURO</text>
+  <text x="400" y="516" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.75)" text-anchor="middle" letter-spacing="3">FOTOGRAFIAS EN PROCESO</text>
+  <circle cx="760" cy="40" r="60" fill="#800020" opacity="0.08"/>
+  <circle cx="40" cy="560" r="60" fill="#800020" opacity="0.08"/>
 </svg>
